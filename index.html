@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head><link rel="stylesheet" href="site-localization.css"><script src="site-localization.js" defer></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DOBO — 하던 작업을 그대로 이어서</title>
+<meta name="description" content="멈춘 곳에서 바로 다시 시작하세요. 작업의 흐름이 끊기지 않는 데스크톱 AI 작업 공간.">
+<link rel="icon" href="icon.svg">
+<script src="site-theme.js"></script>
+<meta name="theme-color" content="#fdfcfb">
+<link rel="stylesheet" href="orbit.css">
+<script src="site.js" defer></script>
+<script src="faq.js" defer></script>
+<script src="orbit.js" defer></script>
+</head>
+<body class="dobo-site orbit-site">
+<a class="skip" href="#main">본문으로 이동</a>
+
+<header class="site-nav">
+ <a class="brand" href="index.html" aria-label="DOBO 홈"><img class="brand-mark" src="icon.svg" width="38" height="26" alt="DOBO"><span class="dobo-wordmark" aria-hidden="true">dobo</span></a>
+ <nav aria-label="메뉴"><a href="#features">기능</a><a href="#pricing">가격</a><a href="#questions">FAQ</a></nav>
+ <div class="nav-actions">
+  <div class="nav-utilities">
+   <button class="motion-toggle" type="button" data-motion-toggle aria-label="움직임 일시정지" aria-pressed="false"><svg class="icon-pause" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M9 6v12M15 6v12"></path></svg><svg class="icon-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"></path></svg></button>
+   <button class="theme-toggle" type="button" data-theme-toggle="" aria-label="다크 모드" aria-pressed="false"><svg class="theme-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"></path></svg><svg class="theme-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20 15A8.5 8.5 0 0 1 9 4a8.5 8.5 0 1 0 11 11Z"></path></svg></button>
+   <span class="language-slot" data-language-slot="" data-language-compact=""></span>
+  </div>
+  
+  <a class="nav-download" data-magnetic href="#download"><span>다운로드</span></a>
+ </div>
+</header>
+
+<main id="main">
+
+ <section class="hero" id="top" aria-labelledby="hero-title">
+  <canvas class="fx-sky" id="fx-sky" aria-hidden="true"></canvas>
+  <div class="hero-grid">
+   <div class="hero-copy">
+    <p class="eyebrow"><i></i>A LITTLE HELP. A NEW POSSIBILITY.</p>
+    <h1 id="hero-title" data-split><span class="line">하던 작업을,</span><span class="line is-accent">그대로 이어서.</span></h1>
+    <p class="lede">멈춘 곳에서 바로 다시 시작하세요.<br>대화와 맥락이 남아 있어, 처음부터 설명할 필요가 없습니다.</p>
+    <div class="actions"><a class="btn btn-primary" data-magnetic href="#download"><span>무료로 시작하기</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6"></path></svg></a><a class="btn btn-ghost" href="#features">기능 살펴보기 <span aria-hidden="true">↓</span></a></div>
+    <small class="hero-note">기본 1,200 크레딧 · 카드 등록 없이 시작</small>
+   </div>
+   <div class="hero-stage" aria-hidden="true">
+    <div class="orbit-rings"><i></i><i></i><i></i></div>
+    <div class="sculpture"><img src="media/brand/dobo-sculpture.webp" width="1024" height="1024" alt="" fetchpriority="high"></div>
+   </div>
+  </div>
+ </section>
+
+ <section class="tools" id="features" aria-labelledby="tools-title">
+  <header class="tools-head">
+   <div><p class="eyebrow"><i></i>끊기지 않는 작업 흐름</p><h2 id="tools-title" data-reveal>작업은 계속 이어져야 하니까.</h2></div>
+   <nav class="tools-rail" aria-label="DOBO 기능"><a href="#resume" data-tool="0"><b>01</b><span>다시 시작</span></a><a href="#projects" data-tool="1"><b>02</b><span>프로젝트별 대화</span></a><a href="#results" data-tool="2"><b>03</b><span>남는 결과</span></a><i class="tools-rail-meter" aria-hidden="true"></i></nav>
+  </header>
+  <div class="tools-track">
+   <article class="tool is-blue" id="resume">
+    <div class="tool-copy"><span class="tool-index" aria-hidden="true">01</span><h3>멈춘 곳에서 다시.</h3><p>앱을 닫아도 대화와 작업 기록이 남습니다. 다음에 열면 하던 자리에서 이어가세요.</p></div>
+    <figure class="tool-shot is-wide"><img class="theme-dark" src="media/orbit/home-dark.webp" width="1980" height="1320" alt="" loading="lazy" decoding="async"><img class="theme-light" src="media/orbit/home-light.webp" width="1980" height="1320" alt="" loading="lazy" decoding="async"></figure>
+   </article>
+   <article class="tool is-violet" id="projects">
+    <div class="tool-copy"><span class="tool-index" aria-hidden="true">02</span><h3>프로젝트마다 이어지는 대화.</h3><p>프로젝트별로 대화가 따로 쌓여, 여러 일을 오가도 맥락이 섞이지 않습니다.</p></div>
+    <figure class="tool-shot is-tall"><img class="theme-dark" src="media/orbit/terminal-dark.webp" width="836" height="1496" alt="" loading="lazy" decoding="async"><img class="theme-light" src="media/orbit/terminal-light.webp" width="836" height="1496" alt="" loading="lazy" decoding="async"></figure>
+   </article>
+   <article class="tool is-ember" id="results">
+    <div class="tool-copy"><span class="tool-index" aria-hidden="true">03</span><h3>결과는 그대로 남습니다.</h3><p>조사한 내용과 지난 결과가 사라지지 않아, 필요할 때 다시 꺼내 이어갈 수 있습니다.</p></div>
+    <figure class="tool-shot is-tall"><img class="theme-dark" src="media/orbit/research-dark.webp" width="856" height="1496" alt="" loading="lazy" decoding="async"><img class="theme-light" src="media/orbit/research-light.webp" width="856" height="1496" alt="" loading="lazy" decoding="async"></figure>
+   </article>
+  </div>
+ </section>
+
+ <section class="steps" id="workflow" aria-labelledby="steps-title">
+  <header class="section-head"><p class="eyebrow"><i></i>SMALL START. REAL WORK.</p><h2 id="steps-title" data-reveal>작게 시작해도 괜찮습니다.</h2><p class="section-lede">설치부터 첫 작업까지, 세 단계면 충분합니다.</p></header>
+  <div class="steps-body">
+   <ol class="steps-list">
+    <li data-reveal><span class="step-num" aria-hidden="true">01</span><h3>설치하고 로그인하세요.</h3><p>계정을 만들면 기본 크레딧이 지급됩니다.</p><span class="step-tag">첫 준비는 가볍게</span></li>
+    <li data-reveal><span class="step-num" aria-hidden="true">02</span><h3>작업을 시작하세요.</h3><p>프로젝트를 열고 AI에게 요청하세요.</p><span class="step-tag">내 작업에 맞게</span></li>
+    <li data-reveal><span class="step-num" aria-hidden="true">03</span><h3>다음 날, 그대로 이어가세요.</h3><p>다시 열면 하던 자리에서 계속됩니다.</p><span class="step-tag">하나씩, 차근차근</span></li>
+   </ol>
+  </div>
+ </section>
+
+ <section class="pricing" id="pricing" aria-labelledby="pricing-title">
+  <header class="section-head is-split">
+   <div><p class="eyebrow"><i></i>A LITTLE MORE ROOM TO WORK</p><h2 id="pricing-title" data-reveal>무료로 시작하고,<br>필요할 때 더하세요.</h2><p class="section-lede">기능을 고르는 대신, 필요한 만큼 크레딧을 더하세요.</p></div>
+   <div class="credit-orb"><span>처음은 가볍게</span><b data-count>1,200</b><small>기본 크레딧</small></div>
+  </header>
+  <div class="plans">
+   <article class="plan" data-reveal><div class="plan-top"><span>FREE</span><span class="plan-doodle" aria-hidden="true">○</span></div><h3>가벼운 첫 시작.</h3><div class="plan-price">$0</div><strong>기본 1,200 크레딧</strong><p>가입 시 지급 · 이후 30일마다 지급<br>Terminal만 이용하면 약 600회<br>카드 등록 없이 시작<br><small>무료 크레딧은 지급 후 30일간 유효합니다.</small></p><a href="#download">무료로 시작하기 <span>↗</span></a></article>
+   <article class="plan is-plus" data-reveal><div class="plan-top"><span>크레딧 PLUS</span><span class="plan-doodle" aria-hidden="true">✳</span></div><h3>매월, 조금 더 넉넉하게.</h3><div class="plan-price">$4.99 <small>/ 월</small></div><strong>매월 추가 1,200 크레딧</strong><p>기본 크레딧과 합산하여 사용<br>Research 태스크 개수 제한 없음<br>자동 갱신 · 내 계정에서 해지<br><small>추가 지급분은 해당 결제 기간까지 유효합니다.</small></p><a aria-disabled="true" tabindex="-1">준비 중</a></article>
+   <article class="plan" data-reveal><div class="plan-top"><span>추가 충전</span><span class="plan-doodle" aria-hidden="true">+</span></div><h3>필요한 순간에, 필요한 만큼.</h3><div class="plan-price">$4.99 <small>부터</small></div><strong>300 / 700 / 1,600 크레딧</strong><p>$4.99 / $9.99 / $19.99<br>필요한 만큼 한 번만 결제<br>결제일부터 365일 유효<br>월 구독과 함께 사용 가능</p><a aria-disabled="true" tabindex="-1">준비 중</a></article>
+  </div>
+  <p class="pricing-note">모든 가격은 USD 기준입니다. 기본 지급은 계정 접속 시 반영되며 미접속 기간은 소급 적립하지 않습니다.</p>
+ </section>
+
+<section class="faq-section" id="questions" aria-labelledby="faq-title">
+ <div class="faq-shell">
+  <div class="faq-heading"><div class="faq-brand" aria-hidden="true">DOBO<span>.</span></div><h2 id="faq-title">자주 묻는 질문</h2><p>DOBO를 시작하기 전에, 궁금한 것부터.</p></div>
+  <div class="faq-content"><div class="faq-filters" role="group" aria-label="질문 분류" hidden><button type="button" data-faq-filter="all" aria-pressed="true" aria-controls="faq-answers">전체</button><button type="button" data-faq-filter="start" aria-pressed="false" aria-controls="faq-answers">시작하기</button><button type="button" data-faq-filter="account" aria-pressed="false" aria-controls="faq-answers">계정과 이용</button><button type="button" data-faq-filter="updates" aria-pressed="false" aria-controls="faq-answers">업데이트</button></div><div class="faq-answers" id="faq-answers"><details name="dobo-faq" id="faq-free" data-faq-category="start"><summary><span>무료로 시작할 수 있나요?</span><svg class="faq-toggle" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path class="faq-plus" d="M12 5v14"/></svg></summary><div class="faq-answer"><p>카드 등록 없이 계정을 만들고, 기본 크레딧으로 필요한 기능을 사용해 보세요.</p></div></details>
+<details name="dobo-faq" id="faq-ai" data-faq-category="start account" open><summary><span>어떤 AI 계정이 필요한가요?</span><svg class="faq-toggle" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path class="faq-plus" d="M12 5v14"/></svg></summary><div class="faq-answer"><p>Terminal·Auto Space·Present AI에는 연결한 CLI 또는 API 계정이 필요합니다.</p><p>Research는 별도의 API 키 없이 이용할 수 있습니다.</p></div></details>
+<details name="dobo-faq" id="faq-research" data-faq-category="start"><summary><span>Research는 어떻게 이용하나요?</span><svg class="faq-toggle" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path class="faq-plus" d="M12 5v14"/></svg></summary><div class="faq-answer"><p>관심 주제를 등록하면 조사 결과를 모아볼 수 있습니다. 핵심 내용을 읽고, 더 자세한 정보는 원문에서 확인하세요.</p></div></details>
+<details name="dobo-faq" id="faq-account" data-faq-category="account"><summary><span>계정과 결제는 어디서 관리하나요?</span><svg class="faq-toggle" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path class="faq-plus" d="M12 5v14"/></svg></summary><div class="faq-answer"><p>내 계정에서 크레딧 잔액과 결제 내역을 확인하고, 충전과 구독을 관리할 수 있습니다.</p></div></details>
+<details name="dobo-faq" id="faq-updates" data-faq-category="updates"><summary><span>새로운 기능은 언제 추가되나요?</span><svg class="faq-toggle" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path class="faq-plus" d="M12 5v14"/></svg></summary><div class="faq-answer"><p>매달 새로운 기능을 하나씩 추가로 선보일 계획입니다.</p></div></details>
+<details name="dobo-faq" id="faq-lingo" data-faq-category="updates"><summary><span>LINGO도 사용할 수 있나요?</span><svg class="faq-toggle" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path class="faq-plus" d="M12 5v14"/></svg></summary><div class="faq-answer"><p>LINGO는 현재 개발 중입니다. 준비가 끝나면 만나보실 수 있어요.</p></div></details></div></div>
+  <div class="faq-updates"><h3>한 달에 하나씩, 새로운 기능.</h3><p>매달 새로운 기능을 하나씩 추가로 선보일 계획입니다.</p></div>
+ </div>
+</section>
+
+ <section class="launch" id="download" aria-labelledby="launch-title">
+  <div class="launch-portal" aria-hidden="true"></div>
+  <div class="launch-copy">
+   <img class="launch-mark" src="icon.svg" alt="" width="86" height="59" loading="lazy">
+   <p class="eyebrow"><i></i>MAKE ROOM FOR YOUR NEXT IDEA</p>
+   <h2 id="launch-title" data-reveal>다음 작업을,<br>DOBO와 함께.</h2>
+   <p class="section-lede">당신의 책상에, 필요한 만큼의 AI.</p>
+   <p class="launch-hint">내 컴퓨터에 맞는 설치 파일을 선택하세요.</p>
+   <p class="mobile-install-note">휴대폰에서는 기능과 요금을 확인하고, 설치는 컴퓨터에서 진행하세요.</p>
+   <div class="download-grid"><a data-download="windows-x64" aria-disabled="true" tabindex="-1"><strong>Windows</strong><span>x64</span><small data-size="windows-x64">설치 파일 준비 중</small></a><a data-download="macos-arm64" aria-disabled="true" tabindex="-1"><strong>macOS</strong><span>Apple Silicon</span><small data-size="macos-arm64">설치 파일 준비 중</small></a><a data-download="macos-x64" aria-disabled="true" tabindex="-1"><strong>macOS</strong><span>Intel</span><small data-size="macos-x64">설치 파일 준비 중</small></a></div>
+   <p class="release-status" data-release-status="">설치 파일 확인 중</p>
+   <details class="integrity"><summary><span>설치 파일 정보</span> · <span>v0.1.1</span></summary><div id="release-integrity"></div></details>
+  </div>
+ </section>
+
+</main>
+<footer class="site-footer wrap" data-site-footer><div class="site-footer-top"><a class="brand" href="index.html"><img class="brand-mark" src="icon.svg" width="38" height="26" alt=""><span class="dobo-wordmark">dobo</span></a><nav aria-label="서비스 정보"><a href="policies.html#terms">이용약관</a><a class="privacy-link" href="policies.html#privacy">개인정보처리방침</a><a href="policies.html#credits">결제 · 환불 안내</a><a href="mailto:ceo@pinous.co.kr">고객지원</a></nav></div><dl class="operator-details" aria-label="운영자 정보"><div><dt>상호</dt><dd>주식회사 파이누스 (Pinous Cor., Ltd)</dd></div><div><dt>대표자</dt><dd>정일현</dd></div><div><dt>사업자등록번호</dt><dd>139-87-02724</dd></div><div><dt>전화</dt><dd>+82-10-2980-1349</dd></div><div><dt>이메일</dt><dd>ceo@pinous.co.kr</dd></div><div><dt>지원 시간</dt><dd>09:00 ~ 18:00</dd></div><div><dt>개인정보 보호 담당</dt><dd>정일현</dd></div></dl><div class="site-footer-bottom"><span>© 2026 DOBO</span><span>A more open kind of workspace.</span></div></footer>
+</body>
+</html>

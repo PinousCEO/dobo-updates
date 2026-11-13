@@ -1,0 +1,142 @@
+/*
+ * DOBO Aurora · website. Linked last on every page.
+ * Brings the site onto the same type and palette as the desktop app, and adds scroll and hover motion.
+ * The hero already carries the brand lights; this file extends that night sky to the rest of the page.
+ */
+@import url("media/fonts/pretendard/pretendardvariable-dynamic-subset.css");
+
+body.dobo-site {
+  --a-font: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI Variable", "Segoe UI", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --a-ease: cubic-bezier(.22, 1, .36, 1);
+  --a-spring: cubic-bezier(.34, 1.56, .64, 1);
+  --paper: #f5f7fc; --ink: #0c1330; --muted: #48557a; --line: #e0e6f2; --accent: #1f5bff; --accent-ink: #fff;
+  --tile: #edf1fa; --card: #ffffff; --shadow: 0 2px 4px rgb(16 32 84 / .04), 0 16px 40px rgb(16 32 84 / .08);
+  --a-ember: #e8530c; --a-glow: rgb(31 91 255 / .22); --a-spot: rgb(47 107 255 / .08);
+  --a-grad-text: linear-gradient(100deg, #0c1330 0%, #1f4fd6 55%, #e8530c 100%);
+  font-family: var(--a-font);
+  letter-spacing: -.011em;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+:root[data-theme="dark"] body.dobo-site {
+  --paper: #080b16; --ink: #f3f5ff; --muted: #bac3df; --line: #232b45; --accent: #7ea4ff; --accent-ink: #fff;
+  --tile: #141a2d; --card: #10152a; --shadow: inset 0 1px 0 rgb(255 255 255 / .05), 0 18px 48px rgb(0 0 0 / .42);
+  --a-ember: #ff8a52; --a-glow: rgb(47 107 255 / .34); --a-spot: rgb(120 155 255 / .12);
+  --a-grad-text: linear-gradient(100deg, #ffffff 0%, #b9cdff 52%, #ffb089 100%);
+}
+body.dobo-site :is(button, input, select, textarea) { font-family: var(--a-font); }
+body.dobo-site :is(h1, h2) { letter-spacing: -.03em !important; }
+body.dobo-site h3 { letter-spacing: -.02em !important; }
+body.dobo-site ::selection { background: color-mix(in srgb, var(--accent) 32%, transparent); }
+
+/* ── Navigation ───────────────────────────────────────────────────────────── */
+body.dobo-site .site-nav nav a { position: relative; transition: color .16s var(--a-ease); }
+body.dobo-site .site-nav nav a::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -6px; height: 2px; border-radius: 2px;
+  background: linear-gradient(90deg, #2f6bff, #ff8a52); transform: scaleX(0); transform-origin: left center;
+  transition: transform .32s var(--a-ease);
+}
+body.dobo-site .site-nav nav a:hover::after { transform: scaleX(1); }
+body.dobo-site .brand .brand-mark { transition: rotate .6s var(--a-spring), scale .6s var(--a-spring); }
+body.dobo-site .brand:hover .brand-mark { rotate: -8deg; scale: 1.1; }
+
+/* ── Buttons ──────────────────────────────────────────────────────────────── */
+body.dobo-site :is(.button.primary, .nav-download, .plus-plan > a, .auth-button, .checkout-page button[type="submit"]) {
+  position: relative; overflow: hidden; border: 0;
+  background:
+    linear-gradient(105deg, transparent 38%, rgb(255 255 255 / .34) 50%, transparent 62%) 180% 0 / 240% 100% no-repeat,
+    linear-gradient(118deg, #1f5bff 0%, #4a7dff 55%, #7b9dff 100%);
+  color: #fff;
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / .26), 0 10px 28px var(--a-glow);
+  transition: translate .2s var(--a-ease), box-shadow .32s var(--a-ease), gap .32s var(--a-ease), filter .2s var(--a-ease);
+}
+body.dobo-site :is(.button.primary, .nav-download, .plus-plan > a, .auth-button, .checkout-page button[type="submit"]):hover:not(:disabled, [aria-disabled="true"]) {
+  translate: 0 -2px; filter: brightness(1.06);
+  box-shadow: inset 0 1px 0 rgb(255 255 255 / .32), 0 16px 40px color-mix(in srgb, #1f5bff 52%, transparent);
+}
+body.dobo-site :is(.button.primary, .nav-download, .plus-plan > a, .auth-button, .checkout-page button[type="submit"]):is(:disabled, [aria-disabled="true"]) { filter: saturate(.55) brightness(.82); box-shadow: none; }
+body.dobo-site .button.quiet { transition: gap .32s var(--a-ease), color .16s var(--a-ease); }
+body.dobo-site .button.quiet:hover { gap: 34px; color: var(--accent); }
+
+/* ── Cards ────────────────────────────────────────────────────────────────── */
+body.dobo-site :is(.step-papers > li, .paper-plans > article, .credit-note > span, .account-pane, .plan-grid > *, .faq-answers details) {
+  border-color: var(--line);
+  transition: translate .36s var(--a-ease), box-shadow .36s var(--a-ease), border-color .36s var(--a-ease);
+}
+body.dobo-site :is(.step-papers > li, .paper-plans > article) {
+  background: linear-gradient(180deg, color-mix(in srgb, var(--card) 92%, transparent), color-mix(in srgb, var(--card) 78%, transparent));
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(14px);
+}
+body.dobo-site :is(.step-papers > li, .paper-plans > article):hover {
+  translate: 0 -6px;
+  border-color: color-mix(in srgb, var(--accent) 55%, var(--line));
+  box-shadow: var(--shadow), 0 22px 54px var(--a-glow);
+}
+body.dobo-site .paper-icon, body.dobo-site .plan-doodle { transition: rotate .6s var(--a-spring), scale .6s var(--a-spring); display: inline-block; }
+body.dobo-site :is(.step-papers > li, .paper-plans > article):hover :is(.paper-icon, .plan-doodle) { rotate: 12deg; scale: 1.25; }
+body.dobo-site .paper-number { color: var(--accent); font-weight: 700; letter-spacing: .12em; font-variant-numeric: tabular-nums; }
+body.dobo-site .plan-price { font-variant-numeric: tabular-nums; font-weight: 760; letter-spacing: -.03em; }
+
+/* The plan worth a second look has a brand edge; it turns while the card is being looked at. */
+@property --a-site-angle { syntax: "<angle>"; inherits: false; initial-value: 0deg; }
+body.dobo-site .paper-plans > .plus-plan {
+  border-color: transparent;
+  background:
+    linear-gradient(var(--card), var(--card)) padding-box,
+    conic-gradient(from var(--a-site-angle), #2f6bff, #8fb0ff 25%, #ff8a52 50%, #8fb0ff 75%, #2f6bff) border-box;
+}
+@keyframes a-site-turn { to { --a-site-angle: 360deg; } }
+
+body.dobo-site .section-intro h2,
+body.dobo-site .rich-price-heading h2,
+body.dobo-site .faq-heading h2,
+body.dobo-site .showcase-heading h2 { font-weight: 760; }
+body.dobo-site .eyebrow { font-weight: 700; letter-spacing: .2em; }
+body.dobo-site .credit-note b {
+  background: var(--a-grad-text); -webkit-background-clip: text; background-clip: text; color: transparent; -webkit-text-fill-color: transparent;
+  font-variant-numeric: tabular-nums;
+}
+
+/* FAQ */
+body.dobo-site .faq-answers details { transition: background-color .2s var(--a-ease), border-color .2s var(--a-ease); }
+body.dobo-site .faq-answers details summary { transition: color .16s var(--a-ease), padding-left .32s var(--a-ease); }
+body.dobo-site .faq-answers details summary:hover { color: var(--accent); padding-left: 6px; }
+body.dobo-site .faq-answers details[open] .faq-answer { animation: a-site-rise .42s var(--a-ease) backwards; }
+
+/* Sign-in, account and checkout */
+body.dobo-site.checkout-page :is(input, select):not([type="checkbox"], [type="radio"]) { transition: border-color .16s var(--a-ease), box-shadow .32s var(--a-ease); }
+body.dobo-site.checkout-page :is(input, select):not([type="checkbox"], [type="radio"]):focus { border-color: var(--accent); box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 20%, transparent); outline: 0; }
+body.dobo-site .auth-intro h1 { font-weight: 780; }
+body.dobo-site .balance-number { font-variant-numeric: tabular-nums; letter-spacing: -.04em; }
+
+/* ── Motion ───────────────────────────────────────────────────────────────── */
+@keyframes a-site-rise { from { opacity: 0; translate: 0 22px; filter: blur(6px); } to { opacity: 1; translate: 0 0; filter: blur(0); } }
+@keyframes a-site-sheen { 0% { background-position: 180% 0, 0 0; } 55%, 100% { background-position: -80% 0, 0 0; } }
+@keyframes a-site-float { 0%, 100% { translate: 0 0; } 50% { translate: 0 -9px; } }
+
+@media (prefers-reduced-motion: no-preference) {
+  body.dobo-site :is(.button.primary, .nav-download, .auth-button):not(:disabled, [aria-disabled="true"]) { animation: a-site-sheen 5.5s 1.2s cubic-bezier(.65, 0, .35, 1) infinite; }
+  body.dobo-site.checkout-page :is(.auth-intro > *, .auth-grid > :last-child, .account-header, .account-overview, .account-pane, .checkout-heading, .plan-grid > *) { animation: a-site-rise .7s var(--a-ease) backwards; }
+  body.dobo-site.checkout-page :is(.auth-intro > :nth-child(2), .account-overview) { animation-delay: .08s; }
+  body.dobo-site.checkout-page :is(.auth-intro > :nth-child(3), .account-pane, .plan-grid > :nth-child(2)) { animation-delay: .16s; }
+  body.dobo-site.checkout-page :is(.auth-intro > :nth-child(n+4), .auth-grid > :last-child, .plan-grid > :nth-child(n+3)) { animation-delay: .24s; }
+  body.dobo-site .auth-brand-art { animation: a-site-float 7s cubic-bezier(.65, 0, .35, 1) infinite; }
+
+  /* Sections come up as they enter the viewport; browsers without scroll timelines simply show them. */
+  @supports (animation-timeline: view()) {
+    body.dobo-site :is(.section-intro, .rich-price-heading, .faq-heading, .faq-updates, .pricing-note, .step-papers > li, .paper-plans > article, .faq-answers details, .rich-closing > div:last-child) {
+      animation: a-site-rise linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 42%;
+    }
+    body.dobo-site :is(.step-papers > li, .paper-plans > article):nth-child(2) { animation-range: entry 8% entry 52%; }
+    body.dobo-site :is(.step-papers > li, .paper-plans > article):nth-child(3) { animation-range: entry 16% entry 62%; }
+  }
+}
+@media (prefers-reduced-motion: no-preference) and (hover: hover) {
+  body.dobo-site .paper-plans > .plus-plan:is(:hover, :focus-within) { animation: a-site-turn 4s linear infinite; }
+}
+
+/* Korean, Japanese and Chinese copy breaks between words, not inside them; long tokens may still wrap. */
+body.dobo-site :is(p, li, dd, dt, label, summary, h1, h2, h3, small) { word-break: keep-all; overflow-wrap: anywhere; }

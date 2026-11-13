@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 2,
+  "version": "0.1.1",
+  "channel": "stable",
+  "source": {
+    "provider": "github",
+    "repository": "PinousCEO/dobo-updates"
+  },
+  "downloads": [
+    {
+      "id": "windows-x64",
+      "label": "Windows",
+      "platform": "windows",
+      "arch": "x64",
+      "available": false,
+      "filename": null,
+      "bytes": 0,
+      "sha256": null,
+      "verification": "unsigned; Windows runtime validation pending"
+    },
+    {
+      "id": "macos-arm64",
+      "label": "macOS · Apple Silicon",
+      "platform": "macos",
+      "arch": "arm64",
+      "available": false,
+      "filename": null,
+      "bytes": 0,
+      "sha256": null,
+      "verification": "ad-hoc signed; not notarized"
+    },
+    {
+      "id": "macos-x64",
+      "label": "macOS · Intel",
+      "platform": "macos",
+      "arch": "x64",
+      "available": false,
+      "filename": null,
+      "bytes": 0,
+      "sha256": null,
+      "verification": "ad-hoc signed; not notarized"
+    }
+  ]
+}
